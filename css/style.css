@@ -9,6 +9,8 @@
 *::before,
 *::after {
   box-sizing: inherit;
+  margin: 0;
+  padding: 0;
 }
 
 html {
@@ -18,6 +20,25 @@ html {
 
 body {
   font-family: sans-serif;
-  color: 333;
+  color: var(--dark-bg);
   line-height: 1.5;
+  background-color: var(--lit-bg);
+}
+
+
+.info-data {
+  background-image: url("../images/mypic.jpg");
+  background-position: top left;
+  background-size: 11vh;
+  background-repeat: no-repeat;
+  background-color: var(--dark-bg);
+  width: 400px;
+  height: 100vh;
+  float: left;
+}
+
+.card {
+  background: url("../images/card.png") top no-repeat;
+  height: 90vh;
+  background-size: contain;
 }
