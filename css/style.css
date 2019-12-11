@@ -195,6 +195,25 @@ body {
   line-height: 1;
 }
 
+.social {
+  position: absolute;
+  top: 66rem;
+  left: 7rem;
+  /* background-color: aquamarine; */
+}
+
+.social-links {
+  width: 3rem;
+}
+
+@media screen and (min-width:991px) {
+  .social {
+    top: 68.5rem;
+    left: 8rem;
+
+  }
+}
+
 ul {
   margin: 3rem 0 0 0;
   text-align: center;
