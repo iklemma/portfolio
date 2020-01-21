@@ -1,0 +1,43 @@
+// $bg-prim-color:;
+// $bg-sec-color:;
+// $prim-color:;
+// $sec-color:;
+// $ter-color:;
+// $acc-color:;
+// $sha-color:;
+
+// $prim-font:;
+// $sec-font:;
+// $ter-font:;
+
+$global-font-size: 62.5%;
+
+
+:root {
+  --lit-bg: #959595;
+  --dark-bg: #161616;
+  --acc-col: #e81743;
+  --acc-col2: #1b1b2d;
+  --acc-text: rgba(255, 255, 255, 0.9);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: $global-font-size;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  // color: $prim-color;
+  // font-weight: ;
+  line-height: 1.5;
+
+}

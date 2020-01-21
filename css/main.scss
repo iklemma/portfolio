@@ -1,10 +1,8 @@
-:root {
-  --lit-bg: #959595;
-  --dark-bg: #161616;
-  --acc-col: #e81743;
-  --acc-col2: #1b1b2d;
-  --acc-text: rgba(255, 255, 255, 0.9);
-}
+@import './global';
+@import './grid';
+@import './utility';
+
+
 
 *,
 *::before,
@@ -24,11 +22,13 @@ body {
   color: var(--dark-bg);
   line-height: 1.5;
   background-color: var(--lit-bg);
+
 }
 
 .wrapper {
   display: flex;
   flex-direction: column;
+  font-size: 
 }
 
 @media screen and (min-width: 992px) {

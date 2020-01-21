@@ -396,7 +396,7 @@ $padding-xxl-l: 5rem;
     flex: 0 0 100%;
     max-width: 100%;
   }
-
+}
   @media (min-width: $grid-md-size) {
     .col-md {
       -ms-flex-preferred-size: 0;
@@ -498,7 +498,7 @@ $padding-xxl-l: 5rem;
       flex: 0 0 100%;
       max-width: 100%;
     }
-
+  }
     @media (min-width: $grid-lg-size) {
       .col-lg {
         -ms-flex-preferred-size: 0;
@@ -600,7 +600,7 @@ $padding-xxl-l: 5rem;
         flex: 0 0 100%;
         max-width: 100%;
       }
-
+    }
       @media (min-width: $grid-xl-size) {
         .col-xl {
           -ms-flex-preferred-size: 0;
@@ -702,3 +702,5 @@ $padding-xxl-l: 5rem;
           flex: 0 0 100%;
           max-width: 100%;
         }
+      }
+    
