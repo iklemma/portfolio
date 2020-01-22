@@ -4,6 +4,10 @@
   --acc-col: #e81743;
   --acc-col2: #1b1b2d;
   --acc-text: rgba(255, 255, 255, 0.9);
+  --prim-font:Lato, 'sans-serif';
+  --sec-font:Arial, Helvetica, 'sans-serif';
+  --ter-font:'Cascadia code';
+  --global-font-size: 62.5%;
 }
 
 *,
@@ -16,13 +20,15 @@
 }
 
 html {
-  font-size: 62.5%;
+  font-size: var(--global-font-size);
 }
 
 body {
+  background-color: var(--lit-bg);
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: sans-serif;
+  color: var(--lit-bg);
   line-height: 1.5;
 }
 
@@ -626,28 +632,6 @@ body {
   padding: 0% 15%;
 }
 
-*,
-*::before,
-*::after {
-  -webkit-box-sizing: inherit;
-          box-sizing: inherit;
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  font-size: 62.5%;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-body {
-  font-family: sans-serif;
-  color: var(--dark-bg);
-  line-height: 1.5;
-  background-color: var(--lit-bg);
-}
-
 .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -724,7 +708,7 @@ body {
 }
 
 .hero-info h3 {
-  font-family: Lato, "sans-serif";
+  font-family: var(--prim-font);
   text-transform: uppercase;
 }
 
@@ -736,7 +720,7 @@ body {
 }
 
 .hero-info_name {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--sec-font);
   font-size: 17rem;
   padding-top: 5rem;
   font-weight: bold;
@@ -825,7 +809,7 @@ body {
 }
 
 .about-me {
-  font-family: "Cascadia code";
+  font-family: var(--ter-font);
   position: absolute;
   top: 43rem;
   left: 2rem;
@@ -841,15 +825,15 @@ body {
   left: 7rem;
 }
 
-.social-links {
-  width: 3rem;
-}
-
 @media screen and (min-width: 991px) {
   .social {
     top: 65.5rem;
     left: 8rem;
   }
+}
+
+.social-links {
+  width: 3rem;
 }
 
 ul {
@@ -860,7 +844,7 @@ ul {
 li {
   display: inline;
   padding-right: 2rem;
-  font-family: Lato, "sans-serif";
+  font-family: var(--prim-font);
   font-size: 2rem;
   font-weight: 600;
 }
@@ -886,7 +870,7 @@ li {
 
 footer {
   text-align: center;
-  font-family: Lato;
+  font-family: var(--prim-font);
   font-weight: 400;
   color: #555;
 }
@@ -898,12 +882,17 @@ li a {
 
 button {
   padding: 1.7rem 0 1.7rem 0;
-  font-family: Lato;
+  font-family: var(--prim-font);
   font-size: 2rem;
   border: none;
   cursor: pointer;
   -webkit-transition-duration: 0.4s;
           transition-duration: 0.4s;
+}
+
+button:hover {
+  -webkit-box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
 .buttons {
@@ -934,10 +923,5 @@ button {
 .button2 {
   margin-top: 0.7rem;
   background-color: var(--acc-col);
-}
-
-button:hover {
-  -webkit-box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
-          box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 /*# sourceMappingURL=main.css.map */
