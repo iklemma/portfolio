@@ -1,4 +1,5 @@
 @import './global';
+@import './modal';
 @import './utility';
 @import './mixins';
 
@@ -61,7 +62,8 @@
 
   &_name {
     font-family: var(--sec-font);
-    font-size: 17rem;
+    font-size: 15rem;
+    margin-left: -2rem;
     padding-top: 5rem;
     font-weight: bold;
     letter-spacing: -2.4rem;
@@ -69,6 +71,9 @@
     text-transform: uppercase;
     text-align: center;
 
+    @include responsive (phone){
+      font-size: 17rem;
+    }
     @include responsive(tab-land) {
       align-self: flex-end;
     }
@@ -81,7 +86,7 @@
     letter-spacing: -7px;
     line-height: 0.9;
     position: relative;
-    z-index: 999;
+    z-index: 1;
     margin-left: 2rem;
 
     @include responsive(phone) {
@@ -282,8 +287,8 @@ button {
   background-color: var(--acc-col);
 }
 .aditional {
-  margin: 0 auto;
-  transition: all 0.3s;
+  margin: 0 auto 3rem;
+  transition: all 0.2s;
 
   @include responsive(tab-land) {
     margin: 0 0 0 11vw;
@@ -292,7 +297,8 @@ button {
 .icon {
   height: 3rem;
   width: 3rem;
-  transition: all 0.3s;
+  transition: all 0.2s;
+  fill:var(--acc-col2);
 
   &:hover{
     fill: white;
