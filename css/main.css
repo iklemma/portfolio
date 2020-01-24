@@ -455,6 +455,7 @@ button {
   font-size: 2rem;
   border: none;
   cursor: pointer;
+  border-radius: 0px 12px 18px -6px rgba(34,56,101,0.12);
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
