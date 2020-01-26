@@ -1,15 +1,16 @@
 @mixin responsive($breakpoint){
+
   @if $breakpoint == phone {
     @media screen and (min-width:37.5em) {
       @content
     };  //600px
   }
-  @if $breakpoint == tab-port {
+  @if $breakpoint == tab-v{
     @media screen and (min-width:50em) {
       @content
     };  // 800px
   }
-  @if $breakpoint == tab-land {
+  @if $breakpoint == tab {
     @media screen and (min-width:62em) {
       @content
     }; //  992px

@@ -159,7 +159,6 @@ body {
   background-position: top left;
   background-size: 10vh;
   background-repeat: no-repeat;
-  height: 60vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -169,9 +168,15 @@ body {
           flex-direction: column;
 }
 
+@media screen and (min-width: 37.5em) {
+  .main-data {
+    height: 60vh;
+  }
+}
+
 @media screen and (min-width: 62em) {
   .main-data {
-    height: 100vh;
+    height: 110vh;
     -webkit-box-pack: right;
         -ms-flex-pack: right;
             justify-content: right;
@@ -216,10 +221,16 @@ body {
 }
 
 .hero-info_intro {
-  font-size: 5rem;
+  font-size: 3rem;
   font-weight: 300;
   letter-spacing: 10px;
   text-align: center;
+}
+
+@media screen and (min-width: 37.5em) {
+  .hero-info_intro {
+    font-size: 5rem;
+  }
 }
 
 .hero-info_name {
@@ -242,6 +253,12 @@ body {
 
 @media screen and (min-width: 62em) {
   .hero-info_name {
+    padding-top: 13rem;
+  }
+}
+
+@media screen and (min-width: 62em) {
+  .hero-info_name {
     -ms-flex-item-align: end;
         align-self: flex-end;
   }
@@ -249,24 +266,21 @@ body {
 
 .hero-info_role {
   color: var(--dark-bg);
-  font-size: 7rem;
+  font-size: 6rem;
   font-weight: 200;
   letter-spacing: -7px;
   line-height: 0.9;
   position: relative;
   z-index: 1;
   margin-left: 2rem;
+  margin-top: 2rem;
 }
 
 @media screen and (min-width: 37.5em) {
   .hero-info_role {
     margin-left: 10rem;
-  }
-}
-
-@media screen and (min-width: 50em) {
-  .hero-info_role {
-    margin-left: 15rem;
+    font-size: 7rem;
+    margin-top: 0;
   }
 }
 
@@ -359,31 +373,25 @@ body {
 }
 
 .card_image {
-  height: 70vh;
+  height: 70rem;
 }
 
 .about-me {
   font-family: var(--ter-font);
   position: absolute;
-  bottom: 5rem;
+  bottom: 8rem;
   left: 2rem;
-  width: 26rem;
+  margin-right: 1.2rem;
+  width: inherit;
   color: var(--acc-text);
-  font-size: 1.6vh;
+  font-size: 1.4rem;
   line-height: 1;
 }
 
 .social {
   position: absolute;
-  top: 66rem;
+  bottom: 1rem;
   left: 7rem;
-}
-
-@media screen and (min-width: 62em) {
-  .social {
-    top: 65.5rem;
-    left: 8rem;
-  }
 }
 
 .social-links {
@@ -452,12 +460,20 @@ li a:hover {
 button {
   padding: 1rem 0 1rem 0;
   font-family: var(--prim-font);
-  font-size: 2rem;
+  font-size: 1.8rem;
+  width: 15rem;
   border: none;
   cursor: pointer;
   border-radius: 0px 12px 18px -6px rgba(34, 56, 101, 0.12);
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+}
+
+@media screen and (min-width: 37.5em) {
+  button {
+    font-size: 2rem;
+    width: 20rem;
+  }
 }
 
 button:hover {
@@ -479,6 +495,9 @@ button:focus {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;

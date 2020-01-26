@@ -7,7 +7,7 @@
   display: flex;
   flex-direction: column;
   // font-size:
-  @include responsive(tab-land) {
+  @include responsive(tab) {
     flex-direction: row;
   }
 }
@@ -18,12 +18,15 @@
   background-position: top left;
   background-size: 10vh;
   background-repeat: no-repeat;
-  height: 60vh;
+  // height: 60vh;
   display: flex;
   flex-direction: column;
 
-  @include responsive(tab-land) {
-    height: 100vh;
+  @include responsive (phone){
+    height: 60vh;
+  }
+  @include responsive(tab) {
+    height: 110vh;
     justify-content: right;
   }
 
@@ -44,7 +47,7 @@
   display: flex;
   flex-direction: column;
 
-  @include responsive(tab-land) {
+  @include responsive(tab) {
     padding-left: 4vw;
     margin-bottom: 0;
   }
@@ -54,10 +57,14 @@
   }
 
   &_intro {
-    font-size: 5rem;
+    font-size: 3rem;
     font-weight: 300;
     letter-spacing: 10px;
     text-align: center;
+
+    @include responsive (phone){
+      font-size: 5rem;
+    }
   }
 
   &_name {
@@ -74,30 +81,37 @@
     @include responsive (phone){
       font-size: 17rem;
     }
-    @include responsive(tab-land) {
+    @include responsive(tab) {
+      padding-top: 13rem;
+    }
+
+    @include responsive(tab) {
       align-self: flex-end;
     }
   }
 
   &_role {
     color: var(--dark-bg);
-    font-size: 7rem;
+    font-size: 6rem;
     font-weight: 200;
     letter-spacing: -7px;
     line-height: 0.9;
     position: relative;
     z-index: 1;
     margin-left: 2rem;
+    margin-top: 2rem;
 
     @include responsive(phone) {
       margin-left: 10rem;
+      font-size: 7rem;
+      margin-top: 0;
     }
 
     @include responsive(tab-port) {
       margin-left: 15rem;
     }
 
-    @include responsive(tab-land) {
+    @include responsive(tab) {
       color: var(--lit-bg);
     }
   }
@@ -122,7 +136,7 @@
     display: flex;
     flex-direction: row;
   }
-  @include responsive(tab-land) {
+  @include responsive(tab) {
     flex-direction: column;
   }
   @include responsive(desktop) {
@@ -141,7 +155,7 @@
     order: 1;
   }
 
-  @include responsive(tab-land) {
+  @include responsive(tab) {
     margin-left: 14rem;
     /* height: 80rem; */
     width: 30rem;
@@ -154,29 +168,29 @@
     // width: 30rem;
   }
   &_image {
-    height: 70vh;
+    height: 70rem;
+
   }
 }
 .about-me {
   font-family: var(--ter-font);
   position: absolute;
-  bottom: 5rem;
+  bottom: 8rem;
   left: 2rem;
-  width: 26rem;
+  margin-right: 1.2rem;
+  width: inherit;
   color: var(--acc-text);
-  font-size: 1.6vh;
+  font-size: 1.4rem;
   line-height: 1;
+
+
 }
 
 .social {
   position: absolute;
-  top: 66rem;
+  bottom: 1rem;
   left: 7rem;
 
-  @include responsive(tab-land) {
-    top: 65.5rem;
-    left: 8rem;
-  }
 
   &-links {
     width: 3rem;
@@ -222,7 +236,7 @@ footer {
   font-weight: 400;
   color: #555;
 
-  @include responsive(tab-land) {
+  @include responsive(tab) {
     margin-top: 7rem;
   }
 }
@@ -240,16 +254,17 @@ li a {
 button {
   padding: 1rem 0 1rem 0;
   font-family: var(--prim-font);
-  font-size: 2rem;
+  font-size: 1.8rem;
+  width:15rem;
   border: none;
   cursor: pointer;
   border-radius: 0px 12px 18px -6px rgba(34,56,101,0.12);
   transition: all 0.3s;
   
-
-  // @include responsive (){
-
-  // }
+@include responsive (phone){
+  font-size: 2rem;
+  width:20rem;
+}
   &:hover {
     box-shadow: /*0px 0px 0px 7px rgba(255, 255, 255, 0.5),
       0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19)*/ 0px
@@ -267,6 +282,7 @@ button {
 .buttons {
   margin: 5rem auto 0;
   display: flex;
+  align-items: center;
   flex-direction: column;
   width: 20rem;
 
@@ -274,7 +290,7 @@ button {
     align-self: flex-end;
     margin-right: 3rem;
   }
-  @include responsive(tab-land) {
+  @include responsive(tab) {
     margin-top: 4rem;
     align-self: flex-end;
   }
@@ -291,7 +307,7 @@ button {
   margin: 0 auto 3rem;
   transition: all 0.2s;
 
-  @include responsive(tab-land) {
+  @include responsive(tab) {
     margin: 0 0 0 11vw;
   }
 }
