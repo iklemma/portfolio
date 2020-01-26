@@ -154,17 +154,17 @@
     // width: 30rem;
   }
   &_image {
-    height: 73rem;
+    height: 70vh;
   }
 }
 .about-me {
   font-family: var(--ter-font);
   position: absolute;
-  top: 43rem;
+  bottom: 5rem;
   left: 2rem;
   width: 26rem;
   color: var(--acc-text);
-  font-size: 1.4rem;
+  font-size: 1.6vh;
   line-height: 1;
 }
 
