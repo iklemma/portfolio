@@ -16,25 +16,23 @@
   background-color: var(--dark-bg);
   background-image: url('../images/mypic.jpg');
   background-position: top left;
-  background-size: 10vh;
+  background-size: 7rem;
   background-repeat: no-repeat;
-  // height: 60vh;
+  height: 60vh;
   display: flex;
   flex-direction: column;
 
   @include responsive (phone){
-    height: 60vh;
+    height: 50rem;
   }
   @include responsive(tab) {
-    height: 110vh;
+    height: 100rem;
     justify-content: right;
   }
 
-  @media screen and (min-width: 1200px) {
-  }
 }
-
 .logo {
+  margin:1rem 0 0 1rem;
   flex: 2;
 }
 
@@ -61,10 +59,6 @@
     font-weight: 300;
     letter-spacing: 10px;
     text-align: center;
-
-    @include responsive (phone){
-      font-size: 5rem;
-    }
   }
 
   &_name {
@@ -125,9 +119,6 @@
   display: flex;
   flex-direction: column;
 
-  // @include responsive(desktop) {
-  //   flex-direction: row;
-  // }
 }
 .detail_wrapper {
   align-self: center;
@@ -164,12 +155,17 @@
 
   @include responsive(desktop) {
     margin-left: 12vw;
-    /* height: 83rem; */
-    // width: 30rem;
+
   }
   &_image {
     height: 70rem;
 
+    @include responsive (tab){
+      height: 73rem;
+    }
+    @include responsive (desktop){
+      height: 80rem;
+    }
   }
 }
 .about-me {
@@ -183,13 +179,22 @@
   font-size: 1.4rem;
   line-height: 1;
 
-
+@include responsive (tab){
+  width:27rem;
+}
+@include responsive (desktop){
+  font-size: 1.5rem;
+}
 }
 
 .social {
   position: absolute;
   bottom: 1rem;
   left: 7rem;
+
+  @include responsive (desktop){
+    left:8rem;
+  }
 
 
   &-links {
@@ -237,7 +242,7 @@ footer {
   color: #555;
 
   @include responsive(tab) {
-    margin-top: 7rem;
+    margin-top: 12rem;
   }
 }
 
@@ -252,7 +257,7 @@ li a {
 }
 
 button {
-  padding: 1rem 0 1rem 0;
+  padding: 1rem 0;
   font-family: var(--prim-font);
   font-size: 1.8rem;
   width:15rem;
@@ -260,8 +265,12 @@ button {
   cursor: pointer;
   border-radius: 0px 12px 18px -6px rgba(34,56,101,0.12);
   transition: all 0.3s;
+
+  @include responsive (phone){
+    width:17rem;
+  }
   
-@include responsive (phone){
+@include responsive (desktop){
   font-size: 2rem;
   width:20rem;
 }
@@ -293,6 +302,9 @@ button {
   @include responsive(tab) {
     margin-top: 4rem;
     align-self: flex-end;
+  }
+  @include responsive(desktop) {
+    margin-left: 4rem;
   }
 }
 .button1 {

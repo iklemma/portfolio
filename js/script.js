@@ -1,5 +1,6 @@
 // Get the modal
 var modal = document.getElementById("myModal");
+var contact = document.getElementById("myContactModal");
 
 // Get the button that opens the modal
 var btn = document.getElementById("myBtn");
@@ -13,16 +14,25 @@ btn.onclick = function() {
   modal.style.display = "block";
 }
 btn2.onclick = function() {
-  modal.style.display = "block";
+  contact.style.display = "block";
 }
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
   modal.style.display = "none";
 }
 
+span.onclick = function() {
+  contact.style.display = "none";
+}
+
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
+  }
+}
+window.onclick = function tra (event2) {
+  if (event2.target == contact) {
+    contact.style.display = "none";
   }
 }

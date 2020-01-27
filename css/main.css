@@ -157,8 +157,9 @@ body {
   background-color: var(--dark-bg);
   background-image: url("../images/mypic.jpg");
   background-position: top left;
-  background-size: 10vh;
+  background-size: 7rem;
   background-repeat: no-repeat;
+  height: 60vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -170,13 +171,13 @@ body {
 
 @media screen and (min-width: 37.5em) {
   .main-data {
-    height: 60vh;
+    height: 50rem;
   }
 }
 
 @media screen and (min-width: 62em) {
   .main-data {
-    height: 110vh;
+    height: 100rem;
     -webkit-box-pack: right;
         -ms-flex-pack: right;
             justify-content: right;
@@ -184,6 +185,7 @@ body {
 }
 
 .logo {
+  margin: 1rem 0 0 1rem;
   -webkit-box-flex: 2;
       -ms-flex: 2;
           flex: 2;
@@ -225,12 +227,6 @@ body {
   font-weight: 300;
   letter-spacing: 10px;
   text-align: center;
-}
-
-@media screen and (min-width: 37.5em) {
-  .hero-info_intro {
-    font-size: 5rem;
-  }
 }
 
 .hero-info_name {
@@ -368,12 +364,23 @@ body {
 @media screen and (min-width: 75em) {
   .card {
     margin-left: 12vw;
-    /* height: 83rem; */
   }
 }
 
 .card_image {
   height: 70rem;
+}
+
+@media screen and (min-width: 62em) {
+  .card_image {
+    height: 73rem;
+  }
+}
+
+@media screen and (min-width: 75em) {
+  .card_image {
+    height: 80rem;
+  }
 }
 
 .about-me {
@@ -388,10 +395,28 @@ body {
   line-height: 1;
 }
 
+@media screen and (min-width: 62em) {
+  .about-me {
+    width: 27rem;
+  }
+}
+
+@media screen and (min-width: 75em) {
+  .about-me {
+    font-size: 1.5rem;
+  }
+}
+
 .social {
   position: absolute;
   bottom: 1rem;
   left: 7rem;
+}
+
+@media screen and (min-width: 75em) {
+  .social {
+    left: 8rem;
+  }
 }
 
 .social-links {
@@ -442,7 +467,7 @@ footer {
 
 @media screen and (min-width: 62em) {
   footer {
-    margin-top: 7rem;
+    margin-top: 12rem;
   }
 }
 
@@ -458,7 +483,7 @@ li a:hover {
 }
 
 button {
-  padding: 1rem 0 1rem 0;
+  padding: 1rem 0;
   font-family: var(--prim-font);
   font-size: 1.8rem;
   width: 15rem;
@@ -470,6 +495,12 @@ button {
 }
 
 @media screen and (min-width: 37.5em) {
+  button {
+    width: 17rem;
+  }
+}
+
+@media screen and (min-width: 75em) {
   button {
     font-size: 2rem;
     width: 20rem;
@@ -518,6 +549,12 @@ button:focus {
     margin-top: 4rem;
     -ms-flex-item-align: end;
         align-self: flex-end;
+  }
+}
+
+@media screen and (min-width: 75em) {
+  .buttons {
+    margin-left: 4rem;
   }
 }
 
